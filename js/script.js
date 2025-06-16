@@ -24,9 +24,15 @@ function multiplyByAddition() {
   
     // Multiply using addition
     let sum = 0;
+    let repeatedString = "";
+  
     for (let i = 0; i < n2; i++) {
       sum += n1;
+      repeatedString += n1;
+      if (i < n2 - 1) {
+        repeatedString += " + ";
+      }
     }
   
-    output.innerHTML = `${n1} + ${n1} added ${n2} times = ${sum}`;
+    output.innerHTML = `${repeatedString} = ${sum}`;
   }
